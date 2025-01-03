@@ -36,9 +36,7 @@ app.use(cookieParser());
 // });
 
 // const configuration = new Configuration({
-//   apiKey:
-//     "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",
-// });
+
 // const openai = new OpenAI(configuration);
 // async function summarizeResume(resumeText) {
 //   try {
@@ -148,6 +146,8 @@ app.use(cookieParser());
 // });
 
 import resumeRouter from "./routes/resume.routes.js";
+import jobRouter from "./routes/job.route.js";
 app.use("/api/v1/resume", resumeRouter);
+app.use("/api/v1/job", jobRouter);
 
 export { app };
